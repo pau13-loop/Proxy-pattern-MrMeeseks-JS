@@ -4,7 +4,7 @@
   "description": "Rick's box that brings MrMeeseks to existence to complete requested task",
   "main": "box.js",
   "scripts": {
-    "test": "test"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
