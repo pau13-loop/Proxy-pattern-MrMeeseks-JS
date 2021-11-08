@@ -1,0 +1,28 @@
+{
+  "name": "ricks-box-mrmeeseks",
+  "version": "1.0.0",
+  "description": "Ricks and Morty implement MrMeeseks box with the proxy pattern",
+  "main": "main.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pau13-loop/Proxy-pattern-MrMeeseks-JS.git"
+  },
+  "keywords": [
+    "js",
+    "proxy-pattern",
+    "module-pattern",
+    "closure",
+    "prototype",
+    "prototype-hierarchy",
+    "delegation-pattern"
+  ],
+  "author": "Pau Llinas Amat",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pau13-loop/Proxy-pattern-MrMeeseks-JS/issues"
+  },
+  "homepage": "https://github.com/pau13-loop/Proxy-pattern-MrMeeseks-JS#readme"
+}
