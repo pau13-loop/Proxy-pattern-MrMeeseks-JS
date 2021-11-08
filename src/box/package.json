@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/pau13-loop/Proxy-pattern-MrMeeseks-JS/issues"
   },
-  "homepage": "https://github.com/pau13-loop/Proxy-pattern-MrMeeseks-JS#readme"
+  "homepage": "https://github.com/pau13-loop/Proxy-pattern-MrMeeseks-JS#readme",
+  "devDependencies": {
+    "jest": "^27.3.1"
+  }
 }
