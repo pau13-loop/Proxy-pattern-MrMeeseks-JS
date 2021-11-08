@@ -1,0 +1,7 @@
+# Ignore compiled test files
+*.test.js
+/test
+
+# Others
+.vscode
+static
