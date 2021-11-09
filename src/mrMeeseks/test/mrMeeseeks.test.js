@@ -91,7 +91,7 @@ describe('scoping de beforeEach', () => {
         expect(meeseeksProto).not.toHaveProperty('accion');
     })
 
-    test('fullfillRequest ejecuta this.accion()', () => {
+    test.only('fullfillRequest ejecuta this.accion()', () => {
 
         // MOCK FUNCTIONS con IMPLEMENTATIONS
 
