@@ -1,11 +1,11 @@
-const { expect } = require('@jest/globals');
+// const { expect } = require('@jest/globals');
 
 // mrmeeseks configurado como paquete
-const factory = require('../mrmeeseeks');
+const factory = require('../mrMeeseeks');
 
 test('Creo un meeseeks usando su factoria', () => {
     expect(factory.singleMrMeeseeks.get()).toBeTruthy;
-  });
+});
 
 test('Los meeseeks creados son el mismo (singleton)', () => {
     let meeseeks_primer = factory.singleMrMeeseeks.get();
@@ -19,7 +19,7 @@ test('Los meeseeks creados son el mismo (singleton)', () => {
  * SCOPING
  * 
  * SETUP y TEARDOWN
- */ 
+ */
 
 describe('scoping de beforeEach', () => {
 
@@ -29,7 +29,7 @@ describe('scoping de beforeEach', () => {
 
     // SETUP
 
-    beforeEach( () => {
+    beforeEach(() => {
         // inicialización de la variable local antes de cada caso test
         // de poco sirve porque el closure ya se ha ejecutado
         meeseeks = factory.singleMrMeeseeks.get();
@@ -44,9 +44,9 @@ describe('scoping de beforeEach', () => {
          */
 
         const boxMock = jest
-                  .fn()
-                  .mockImplementation( () => Object.create(meeseeks) )
-                  .mockName('boxMock');
+            .fn()
+            .mockImplementation(() => Object.create(meeseeks))
+            .mockName('boxMock');
 
         box.pressButton = boxMock;
     })
@@ -105,14 +105,14 @@ describe('scoping de beforeEach', () => {
          */
 
         const accionMock = jest
-                            .fn()
-                            .mockImplementation( () => "open" + " " + "Jerry's head")
-                            .mockName('accionMock') // mensajes especificos en test errors outputs
+            .fn()
+            .mockImplementation(() => "open" + " " + "Jerry's head")
+            .mockName('accionMock') // mensajes especificos en test errors outputs
 
         // inyecto en el objeto la funcion mock
         meeseeks.accion = accionMock;
         expect(meeseeks).toHaveProperty('accion');
-        
+
         // el objeto meeseeks invoca a la funcion mock
         expect(meeseeks.fulfillRequest()).toEqual(expect.stringMatching("open" + " " + "Jerry's head" + " All done!!"))
 
@@ -125,7 +125,7 @@ describe('scoping de beforeEach', () => {
         // mrmeeseeks tendra como prototipo a meeseeks 
         // por Object.create() en pressButton()
         let clon = box.pressButton();
-        
+
         Object.getPrototypeOf(clon).messageOnCreate = "Hi!!";
 
         expect(meeseeks.messageOnCreate).toEqual(expect.stringMatching("Hi!!"));
