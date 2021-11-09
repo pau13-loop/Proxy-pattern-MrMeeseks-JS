@@ -22,6 +22,10 @@ Box.prototype.getProtoMeeseks = function() {
     return this.mrMeeseeks;
 }
 
+Box.prototype.pressButton = function(reality) {
+    return reality.push(this.createMrMeeseeks());
+} 
+
 var factory = (function singleBox() {
     var instanceBox = new Box();
     return {
