@@ -5,9 +5,21 @@ function Box() {
     this.mrMeeseeks = null;
 }
 
+function mrMeeseks() {
+    this.messageOnCreate = "I'm Mr Meeseeks! Look at meeee!";
+    this.messageOnRequest = ["Oooh", "ssireee!", "sma'am!"]
+}
+
 // Creates a copy/clone of the obj meeseks 
 Box.prototype.createMrMeeseeks = function () {
-    return JSON.parse( JSON.stringify( meeseeks ) );
+    if (!this.mrMeeseeks) {
+        this.mrMeeseeks = new mrMeeseks();
+    }
+    return Object.create(this.mrMeeseeks);
+}
+
+Box.prototype.getProtoMeeseks = function() {
+    return this.mrMeeseeks;
 }
 
 var factory = (function singleBox() {
