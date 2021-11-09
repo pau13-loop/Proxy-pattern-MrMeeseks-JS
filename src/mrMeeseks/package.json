@@ -4,7 +4,7 @@
   "description": "mrMeeseks npm package",
   "main": "mrMeeseks.js",
   "scripts": {
-    "test": "test"
+    "test": "jest"
   },
   "repository": {
     "type": "git",

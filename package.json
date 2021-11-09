@@ -4,7 +4,8 @@
   "description": "Ricks and Morty implement MrMeeseks box with the proxy pattern",
   "main": "main.js",
   "scripts": {
-    "test": "test"
+    "test": "jest",
+    "main": "node ./src/main.js"
   },
   "repository": {
     "type": "git",
