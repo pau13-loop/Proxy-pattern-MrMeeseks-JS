@@ -1,5 +1,5 @@
 function MrMeeseeks() {
-    this.messageOnCreate = "I'm MrMeeseeks! Look at meee !";
+    this.messageOnCreate = "I'm Mr Meeseeks! Look at meeee!";
 }
 
 var factory = (function singletonMrMeeseeks() {
