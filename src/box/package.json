@@ -1,0 +1,29 @@
+{
+  "name": "box",
+  "version": "1.0.0",
+  "description": "Rick's box that brings MrMeeseks to existence to complete requested task",
+  "main": "box.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pau13-loop/Proxy-pattern-MrMeeseks-JS.git"
+  },
+  "keywords": [
+    "proxy-pattern",
+    "module-pattern",
+    "closure",
+    "OOLO",
+    "prototypal-inheritance"
+  ],
+  "author": "Pau Llinas Amat",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pau13-loop/Proxy-pattern-MrMeeseks-JS/issues"
+  },
+  "homepage": "https://github.com/pau13-loop/Proxy-pattern-MrMeeseks-JS#readme",
+  "devDependencies": {
+    "jest": "^27.3.1"
+  }
+}
