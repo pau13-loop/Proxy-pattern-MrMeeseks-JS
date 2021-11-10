@@ -26,7 +26,12 @@ MrMeeseeks.prototype.makeRequest = function(action, object) {
     this.speakOnRequest();
 }
 
-
+//? Revisar implementación return y console.log en la misma función ???
+MrMeeseeks.prototype.fulfillRequest = function() {
+    let request =  this.accion();
+    console.log(request + " All done!!");
+    return request + " All done!!";
+}
 
 var factory = (function singletonMrMeeseeks() {
     var instanceMeeseeks = new MrMeeseeks();

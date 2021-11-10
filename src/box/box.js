@@ -5,15 +5,10 @@ function Box() {
     this.mrMeeseeks = null;
 }
 
-function mrMeeseks() {
-    this.messageOnCreate = "I'm Mr Meeseeks! Look at meeee!";
-    this.messageOnRequest = ["Oooh", "ssireee!", "sma'am!"]
-}
-
 // Creates a copy/clone of the obj meeseks 
 Box.prototype.createMrMeeseeks = function () {
     if (!this.mrMeeseeks) {
-        this.mrMeeseeks = new mrMeeseks();
+        this.mrMeeseeks = meeseeks.singleMrMeeseeks.get();
     }
     return Object.create(this.mrMeeseeks);
 }
@@ -23,6 +18,7 @@ Box.prototype.getProtoMeeseks = function() {
 }
 
 Box.prototype.pressButton = function(reality) {
+    this.mrMeeseeks.speakOnCreate();
     return reality.push(this.createMrMeeseeks());
 } 
 
