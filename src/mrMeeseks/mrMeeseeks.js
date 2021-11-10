@@ -18,13 +18,15 @@ MrMeeseeks.prototype.speakOnCreate = function () {
     console.log(this.messageOnCreate);
 }
 
-MrMeeseeks.prototype.makeRequest = function(action, request) {
-    let onRequest = function() {
-        return action + ' ' + request; 
+MrMeeseeks.prototype.makeRequest = function(action, object) {
+    let prepareRequest = function() {
+            return action + ' ' + object; 
     }
-    this.accion = onRequest;
+    this.accion = prepareRequest;
     this.speakOnRequest();
 }
+
+
 
 var factory = (function singletonMrMeeseeks() {
     var instanceMeeseeks = new MrMeeseeks();
