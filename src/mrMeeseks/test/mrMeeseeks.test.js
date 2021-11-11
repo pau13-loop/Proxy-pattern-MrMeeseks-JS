@@ -1,4 +1,4 @@
-// const { expect } = require('@jest/globals');
+const { expect } = require('@jest/globals');
 
 // mrmeeseks configurado como paquete
 const factory = require('../mrMeeseeks');
@@ -91,7 +91,7 @@ describe('scoping de beforeEach', () => {
         expect(meeseeksProto).not.toHaveProperty('accion');
     })
 
-    test.only('fullfillRequest ejecuta this.accion()', () => {
+    test('fullfillRequest ejecuta this.accion()', () => {
 
         // MOCK FUNCTIONS con IMPLEMENTATIONS
 

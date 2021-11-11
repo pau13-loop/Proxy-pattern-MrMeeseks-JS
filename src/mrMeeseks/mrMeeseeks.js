@@ -1,6 +1,6 @@
 function MrMeeseeks() {
     this.messageOnCreate = "I'm Mr Meeseeks! Look at meeee!";
-    this.messageOnRequest = ["Oooh yeah! Can do!", "Yes ssireee!", "Oh yeah, Yes ma'am!"]
+    this.messageOnRequest = ["Oooh yeah! Can do!", "Yes sireee!", "Oh yeah, Yes ma'am!"]
 }
 
 //! The test case for this method checks the console log & the return
@@ -19,10 +19,13 @@ MrMeeseeks.prototype.speakOnCreate = function () {
 }
 
 MrMeeseeks.prototype.makeRequest = function(action, object) {
-    let prepareRequest = function() {
-            return action + ' ' + object; 
+    let prepareRequest = function(other) {
+        function execute() {
+            return action + ' ' + other; 
+        }
+        return execute;
     }
-    this.accion = prepareRequest;
+    this.accion = prepareRequest(object);
     this.speakOnRequest();
 }
 
@@ -31,6 +34,10 @@ MrMeeseeks.prototype.fulfillRequest = function() {
     let request =  this.accion();
     console.log(request + " All done!!");
     return request + " All done!!";
+}
+
+MrMeeseeks.prototype.learnRequest = function (wish, object) {
+    this.accion = wish(object);
 }
 
 var factory = (function singletonMrMeeseeks() {
