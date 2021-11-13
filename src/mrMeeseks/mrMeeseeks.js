@@ -43,7 +43,7 @@ MrMeeseeks.prototype.learnRequest = function (wish, object) {
 var factory = (function singletonMrMeeseeks() {
     var instanceMeeseeks = new MrMeeseeks();
     return {
-        get: function () {
+        get: () => {
             return instanceMeeseeks;
         }
     }

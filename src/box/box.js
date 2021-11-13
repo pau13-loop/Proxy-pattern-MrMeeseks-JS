@@ -25,7 +25,7 @@ Box.prototype.pressButton = function(reality) {
 var factory = (function singleBox() {
     var instanceBox = new Box();
     return {
-        getBox: function () {
+        getBox: () => {
             return instanceBox;
         }
     }
